@@ -1,0 +1,24 @@
+version: '3'
+services:
+  api:
+    environment:
+      - PORT=3000
+      - DB_HOST=db
+      - DB_PASS=123
+      - DB_USER=grupo12
+    build: .
+    ports:
+      - "3000:3000"
+    links:
+      - db
+    depends_on: 
+      - db
+    command: ["./infra/wait-for-it.sh", "-t", "20", "db:3306", "--", "nodemon", "bin/www"]
+
+  db:
+    image: mysql:5.7
+    environment:
+      MYSQL_PASSWORD: 123
+      MYSQL_USER: grupo12
+      MYSQL_DATABASE: grupo12
+      MYSQL_RANDOM_ROOT_PASSWORD: "yes"
