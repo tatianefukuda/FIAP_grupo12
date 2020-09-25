@@ -15,7 +15,7 @@ Na raíz
 docker-compose up
 ````
 
-Endereço local http://localhot:3000
+Endereço local http://localhost:3000
 
 
 ## Funcionamento da API
