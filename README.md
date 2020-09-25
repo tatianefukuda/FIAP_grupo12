@@ -1,8 +1,8 @@
-# Nova funcionalidade para o 99Taxi
+# Nova funcionalidade de preferências para a 99
 
 ## Introdução
 
-Desenvolvemos uma API para uma nova funcionalidade onde o usuário poderá escolher suas preferencias, para usar em suas corridas.
+O objetivo da API é capturar as preferências dos usuários para oferecer uma corrida que melhor atenda as suas necessidades.
 
 ## Tecnologias
 
@@ -10,7 +10,7 @@ Foi usado NodeJS 13 + Express 4 + Mysql 5.7 + Docker e Docker Compose
 
 ## Subindo a app
 
-Na raíz
+Execute na raiz
 ````
 docker-compose up
 ````
@@ -29,7 +29,7 @@ Lista as preferências que o usuário pode escolher
     {
         "id": 1,
         "name": "apenas_sexo_feminino",
-        "description": "Motorias do sexo feminino"
+        "description": "Motoristas do sexo feminino"
     },
     {
         "id": 2,
@@ -61,8 +61,8 @@ Lista as preferências que o usuário pode escolher
 
 ### Post user/preferences
 
-Adiciona preferências para um usuário. Aqui temos uma regra de domínio, onde a preferencia **Motorias do sexo feminino** só pode ser para
-usuários do Sexo Feminino;
+Adiciona preferências para um usuário. Aqui temos uma regra de domínio, onde a preferencia **Motoristas do sexo feminino** só pode ser exibida para
+usuárias do sexo feminino;
 
 Para efeito de teste, temos na app dois IDs de usuário: Id 1 é masculino o 2 feminino.
 
@@ -120,7 +120,7 @@ Para efeito de teste, temos na app dois IDs de usuário: Id 1 é masculino o 2 f
 
 ### Get user/preferences/:user_id
 
-Retorna as preferências do usuário
+Retorna as preferências do usuário já salvas
 
 #### Response
 
