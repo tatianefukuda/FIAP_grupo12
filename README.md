@@ -59,7 +59,7 @@ Lista as preferências que o usuário pode escolher
 ]
 ````
 
-### Post user/preferences
+### Post /user/preferences
 
 Adiciona preferências para um usuário. Aqui temos uma regra de domínio, onde a preferencia **Motoristas do sexo feminino** só pode ser exibida para
 usuárias do sexo feminino;
@@ -118,7 +118,7 @@ Para efeito de teste, temos na app dois IDs de usuário: Id 1 é masculino o 2 f
 ]
 `````
 
-### Get user/preferences/:user_id
+### Get /user/preferences/:user_id
 
 Retorna as preferências do usuário já salvas
 
