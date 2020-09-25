@@ -120,7 +120,7 @@ Para efeito de teste, temos na app dois IDs de usuário: Id 1 é masculino o 2 f
 
 ### Get user/preferences/:user_id
 
-Retorna as preferência do usuário
+Retorna as preferências do usuário
 
 #### Response
 
